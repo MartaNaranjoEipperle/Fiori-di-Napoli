@@ -1,0 +1,166 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    font-family: 'Lora';
+    font-size: 28px;
+    color: #8e9193;
+    text-align: center;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.header h1::first-letter{
+    font-family: 'Carattere'; 
+    font-size: 150px;
+}
+
+
+.header h1{
+    width: 100%;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: fit-content; 
+}
+ƒ
+.left-side{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: 100%;
+}
+
+.dia-show {
+    background-image: url("./assets/img/pizza-spinat.jpg");
+    top: 0;
+    height: 400px;
+    background-size: cover; 
+    background-position: center; 
+    opacity: 0.7; 
+    transition:opacity 1.5s ease;
+}
+
+.overlay {
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 0.9s ease; 
+}
+
+
+.order-container{
+    color: aliceblue;
+}
+
+.menu{
+    color: #727374;;
+    background-color: aliceblue;
+    text-align: start;
+    border: solid 9px;
+    border-radius: 3px;
+    margin: 10px 42px 42px 42px;
+    padding: 20px;
+}
+
+.menu h2{
+    color: rgb(89, 91, 91);;
+}
+
+.menu-selection{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    margin-left: 47px;
+}
+
+.menu-selection h3{
+    margin: 0;
+    padding-right: 50px;
+}
+
+.menu-selection h3:hover{
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+#selection :hover{
+cursor: pointer;
+opacity: 0.5;
+}
+
+#mySum{
+    justify-content: space-between;
+    margin: 15px;
+}
+
+.finally-order{
+    margin: 15px;
+    border: solid 2px #737171;
+    border-radius: 2px;
+    width: 75px;
+    text-align: center;
+    color: #e7e5e5;
+    background-color: #797979;
+}
+
+.finally-order:hover{
+   cursor: pointer;
+   opacity: 0.5;
+}
+
+.quantity-btn{
+    margin-right: 5px;
+    margin-left: 5px;
+    width: 19px;
+    height: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f6f6;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 3px;
+    color: gray;
+}
+
+.quantity-btn:hover{
+  cursor: pointer;
+  color: #e7e5e5;
+  background-image: linear-gradient(to right, #a0a0a0, #c8c8c8);
+}
+
+.quantity{
+    display: flex;
+}
+
+.add-to-cart-message {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.add{
+    width: 100px;
+}
+
+.delete{
+    width: 95px;
+    justify-content: end !important;
+}

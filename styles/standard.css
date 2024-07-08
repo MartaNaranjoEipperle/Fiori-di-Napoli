@@ -1,0 +1,84 @@
+body{
+    margin: 0;
+    font-family: 'Lora';
+    background-color: black;
+    width: fit-content;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.flex-start{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+} 
+
+.flex-start-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.flex-start-center p{
+    padding-left: 0px;
+    margin: 0;
+}
+
+.flex-start-center h4{
+    margin: 0;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 20px;
+}
+
+
+.bb{
+    background-color: black;
+}
+
+.space-evenly{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.width60{
+    width: 200px;
+}
+
+.opacity{
+    opacity: 0.5;
+}
+
+
+.quantity-input{
+    width: 42px;
+}
+
+.d-none{
+    display: none!important;
+}
+
+.w130{
+    width: 100px;
+}
+
+.b-margin{
+    margin-bottom: 3px;
+}

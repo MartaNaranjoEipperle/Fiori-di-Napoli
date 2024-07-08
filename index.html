@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiore di Napoli</title>
+    <link rel="icon" type="image/png" href="assets/icons/favicon.jpeg">
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/standard.css">
+    <link rel="stylesheet" href="./styles/assets.css">
+    <link rel="stylesheet" href="./styles/basket.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+    <script src="./scripts/db.js"></script>
+    <script src="./scripts/template.js"></script>
+    <script src="./scripts/helpers.js"></script>
+    <script src="./scripts/customerForm.js"></script>
+    <script src="./scripts/categorySelector.js"></script>
+    <script src="./scripts/addToOrder.js"></script>
+    <script src="./scripts/orderManagement.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body onload="init()">
+    <div class="header" id="header">
+        <div class="logo"></div>
+        <h1>Fiore di Napoli</h1>
+    </div>
+    <div class="flex-start bb container" id="container">
+        <div class="left-side">
+            <div class="dia-show" id="diaShow"></div>
+            <div class="sticky" id="sticky">
+                <div class="basket" id="basket">
+                    <h3>Cart</h3>
+                    <div id="cart" class="cart">Your cart is empty. Explore our delicious dishes and choose the perfect
+                        one for you.</div>
+                    <div id="myOrderCart" class="flex-column"></div>
+                    <div id="mySum" class="flex-start"></div>
+                    <div id="selection-container" class="selection-container"></div>
+                    <div id="finallyOrder" class="d-none finally-order" onclick="finallyorder()"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="overlay" id="overlay">
+            <div class="menu-selection">
+                <div class="flex-start">
+                    <h3 onclick="selection('dishes-selection')" id="dishes-selection">Dishes</h3>
+                    <h3 onclick="selection('beverages-selection')" id="beverages-selection">Beverages</h3>
+
+                </div>
+                <div class="flex-start">
+                    <div id="selection" class="row width60"></div>
+                </div>
+            </div>
+
+            <div class="menu" id="menu"></div>
+
+        </div>
+
+    </div>
+    <div class="footer"></div>
+
+</body>
+
+</html>

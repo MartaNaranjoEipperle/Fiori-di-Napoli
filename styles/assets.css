@@ -1,0 +1,16 @@
+.logo{
+    background-image: url(../assets/icons/favicon.jpeg);
+    width: 35px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.75;
+}
+
+.menu-image{
+    width: 100%;
+    height: 200px;
+    background-size: cover; 
+    background-position: center;
+}
