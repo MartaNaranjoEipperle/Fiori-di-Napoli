@@ -1,5 +1,8 @@
-// Function for selecting category in menu
-
+/**
+ * Confirms the selected category and updates the menu display.
+ * 
+ * @param {string} myCategory - The selected category.
+ */
 function confirmCategory(myCategory) {
     const category = categoryMap[myCategory];
     if (category) {
@@ -9,6 +12,9 @@ function confirmCategory(myCategory) {
     document.getElementById(myCategory + "Menu").classList.add('opacity');
 }
 
+/**
+ * Confirms the subcategory by resetting the opacity of all categories.
+ */
 function confirmSubategory() {
     Object.keys(categoryMap).forEach(category => {
         let categoryElement = document.getElementById(category + "Menu");
@@ -18,7 +24,11 @@ function confirmSubategory() {
     });
 }
 
-//Selection in menu (drinks or food)
+/**
+ * Handles the selection of either dishes or beverages in the menu.
+ * 
+ * @param {string} nameOfSelection - The name of the selection (dishes or beverages).
+ */
 function selection(nameOfSelection) {
     let selection = leerContain('selection');
     removeOpacity();
@@ -31,28 +41,45 @@ function selection(nameOfSelection) {
     addOpacity(nameOfSelection);
 }
 
+/**
+ * Adds opacity to the selected menu category.
+ * 
+ * @param {string} nameOfSelection - The name of the selected category.
+ */
 function addOpacity(nameOfSelection) {
     document.getElementById('dishes-selection').classList.remove('opacity');
     document.getElementById('beverages-selection').classList.remove('opacity');
     document.getElementById(nameOfSelection).classList.add('opacity');
 }
 
+/**
+ * Removes opacity from all selection labels.
+ */
 function removeOpacity() {
     document.querySelectorAll('.nameOfSelection').forEach(label => {
         label.classList.remove('opacity');
     });
 }
 
-//Selection of order delivery
+/**
+ * Handles the selection of order delivery option.
+ * 
+ * @param {string} option - The selected delivery option.
+ */
 function selectDeliveryOption(option) {
     updateOptionSelection(option);
     if (option == 'delivery' && delivery == false) {
         ifOptionForSelectDelivery(option);
-    } else if(delivery == true) {
+    } else if (delivery == true) {
         elseOptionForSelectDelivery();
     } 
 }
 
+/**
+ * Updates the selection of the delivery option.
+ * 
+ * @param {string} option - The selected delivery option.
+ */
 function updateOptionSelection(option) {
     choiceOption = [option];
     document.querySelectorAll('.option').forEach(label => {
@@ -63,7 +90,12 @@ function updateOptionSelection(option) {
     document.getElementById('finallyOrder').innerHTML = 'To order';
 }
 
-function ifOptionForSelectDelivery(option){
+/**
+ * Handles the case when the delivery option is selected.
+ * 
+ * @param {string} option - The selected delivery option.
+ */
+function ifOptionForSelectDelivery(option) {
     delivery = true;
     document.getElementById(option).innerHTML += '(+5,00€)';
     let priceWithDelivery = 5 + determinePrice();
@@ -71,7 +103,10 @@ function ifOptionForSelectDelivery(option){
     ReloadUpdatePrice(euPriceWithDelivery);
 }
 
-function elseOptionForSelectDelivery(){
+/**
+ * Handles the case when the delivery option is deselected.
+ */
+function elseOptionForSelectDelivery() {
     document.getElementById('finallyOrder').classList.add('d-none');
     document.getElementById('delivery').classList.remove('selected');
     delivery = false;

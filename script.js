@@ -7,15 +7,19 @@ let summed = true;
 let addition = true;
 
 
+/**
+ * Initializes the application by starting the diashow and displaying the menu.
+ */
 function init() {
     diashow();
     displayMenu(menuLibrary.Dishes.Pizza, "Pizza", "pizza-spinat");
 }
 
-//Diashow
-
+/**
+ * Starts the diashow by changing the background image of the diaShow element every 6 seconds.
+ */
 function diashow() {
-    let show = document.getElementById('diaShow')
+    let show = document.getElementById('diaShow');
     setInterval(function () {
         show.style.opacity = 0;
         setTimeout(function () {
@@ -27,8 +31,13 @@ function diashow() {
     }, 6000);
 }
 
-
-//Order taking
+/**
+ * Displays the menu items in the menu container.
+ *
+ * @param {Array<Object>} menuItems - The list of menu items to display.
+ * @param {string} menuTitle - The title of the menu.
+ * @param {string} imageName - The image name associated with the menu.
+ */
 function displayMenu(menuItems, menuTitle, imageName) {
     let menuContainer = document.getElementById('menu');
     menuContainer.innerHTML = '';
@@ -38,7 +47,9 @@ function displayMenu(menuItems, menuTitle, imageName) {
     });
 }
 
-//Sticky order
+/**
+ * Processes the final order by checking if the cart is empty, displaying a popup, and clearing the cart.
+ */
 function finallyorder() {
     let content = document.getElementById('myOrderCart').innerHTML.trim();
     if (content.length !== 0) {
@@ -54,7 +65,9 @@ function finallyorder() {
     }
 }
 
-//Adjusts the height of an element based on window width.
+/**
+ * Adjusts the height of the sticky element based on the window width.
+ */
 function adjustHeight() {
     if (window.innerWidth > 767) {
         let overlay = document.getElementById('overlay');
@@ -66,6 +79,6 @@ function adjustHeight() {
     }
 }
 
+// Adds event listeners to adjust the height on window load and resize.
 window.addEventListener('load', adjustHeight);
 window.addEventListener('resize', adjustHeight);
-
