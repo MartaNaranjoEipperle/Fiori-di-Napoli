@@ -1,6 +1,6 @@
-## Fiori di Napoli Restaurant Ordering Platform
+## Fiore di Napoli Restaurant Ordering Platform
 
-Fiori di Napoli offers a convenient platform for placing restaurant orders, whether dining in, for takeout, or home delivery. Choose from a variety of authentic Italian dishes and beverages, all crafted to satisfy your culinary cravings.
+Fiore di Napoli offers a convenient platform for placing restaurant orders, whether dining in, for takeout, or home delivery. Choose from a variety of authentic Italian dishes and beverages, all crafted to satisfy your culinary cravings.
 
 ### Key Features:
 - **Order Flexibility**: Select from options to dine-in, self-pickup, or have your meal delivered to your doorstep.
